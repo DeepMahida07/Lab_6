@@ -115,7 +115,7 @@ def save_installer(installer_data):
         print('VLC player is being saved')
         installer_data = resp_msg.content
     
-        with open(r"C:\Users\17059\Downloads\vlc-3.0.17.4-win64.exe", "wb") as file:
+        with open(r"C:\deep_temp\Lab_6\vlc-3.0.17.4-win64.exe", "wb") as file:
             file.write(installer_data)
     return
 
@@ -127,7 +127,7 @@ def run_installer(installer_path):
     """    
     # TODO: Step 5
     # Hint: See example code in lab instructions entitled "Running the VLC Installer"
-    installer_path = r'C:\Users\17059\Downloads\vlc-3.0.17.4-win64.exe'
+    installer_path = r'C:\deep_temp\Lab_6\vlc-3.0.17.4-win64.exe'
     subprocess.run([installer_path, '/L=1033', '/S'])
     return
     
@@ -140,7 +140,7 @@ def delete_installer(installer_path):
         installer_path (str): Full path of the VLC installer file
     """
 
-    installer_path = r'C:\Users\17059\Downloads\vlc-3.0.17.4-win64.exe'
+    installer_path = r'C:\deep_temp\Lab_6\vlc-3.0.17.4-win64.exe'
     os.remove(installer_path)
     return
 
