@@ -91,8 +91,10 @@ def installer_ok(installer_data, expected_sha256):
     #Verifying the values of SHA256.
     if sha256 == expected_sha256:
         print('Value match the expected SHA256 value')
+        return True
     else:
         print('Value does not match')
+        return False
 
 def save_installer(installer_data):
     """Saves the VLC installer to a local directory.
@@ -127,7 +129,6 @@ def run_installer(installer_path):
     # Hint: See example code in lab instructions entitled "Running the VLC Installer"
     installer_path = r'C:\Users\17059\Downloads\vlc-3.0.17.4-win64.exe'
     subprocess.run([installer_path, '/L=1033', '/S'])
-    
     return
     
 def delete_installer(installer_path):
