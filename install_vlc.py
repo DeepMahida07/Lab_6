@@ -79,7 +79,7 @@ def installer_ok(installer_data, expected_sha256):
     # TODO: Step 3
     # Hint: See example code in lab instructions entitled "Computing the Hash Value of a Response Message Body"
 
-    expected_sha256 = get_expected_sha256()
+    expected_sha256 = ('fda8cbf2ee876be4eb14d7affca3a0746ef4ae78341dbb589cbdddcf912db85c')
 
     file_url = "http://download.videolan.org/pub/videolan/vlc/3.0.17.4/win64/vlc-3.0.17.4-win64.exe"
     resp_msg = requests.get(file_url)
